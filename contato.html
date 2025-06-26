@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Caio Lucas Silva</title>
+    <meta name="description" content="Entre em contato com Caio Lucas Silva para oportunidades, projetos ou colaborações.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body class="antialiased">
+
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-40 shadow-sm flex-shrink-0">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-slate-800">Caio Lucas Silva</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="nav-link">Início</a>
+                <a href="sobre.html" class="nav-link">Sobre</a>
+                <a href="projetos.html" class="nav-link">Projetos</a>
+                <a href="certificados.html" class="nav-link">Certificados</a>
+                <a href="contato.html" class="nav-link active">Contato</a>
+            </nav>
+            <button id="mobile-nav-toggle" class="md:hidden z-50">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="fixed inset-0 bg-white/90 backdrop-blur-xl z-40 transform translate-x-full transition-transform ease-in-out duration-300 md:hidden">
+            <div class="flex flex-col items-center justify-center h-full space-y-8">
+                 <a href="index.html" class="nav-link text-2xl font-semibold text-slate-700 hover:text-accent">Início</a>
+                 <a href="sobre.html" class="nav-link text-2xl font-semibold text-slate-700 hover:text-accent">Sobre</a>
+                 <a href="projetos.html" class="nav-link text-2xl font-semibold text-slate-700 hover:text-accent">Projetos</a>
+                 <a href="certificados.html" class="nav-link text-2xl font-semibold text-slate-700 hover:text-accent">Certificados</a>
+                 <a href="contato.html" class="nav-link text-2xl font-semibold text-slate-700 hover:text-accent">Contato</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow flex flex-col">
+        <section class="page active">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-8">Vamos Conversar</h2>
+                <p class="text-lg max-w-2xl mx-auto mb-8">Me envie uma mensagem!</p>
+                <form id="contact-form" class="max-w-xl mx-auto text-left bg-white p-6 rounded-lg shadow-md" novalidate>
+                    <div class="form-group mb-4">
+                        <label for="name" class="block mb-1 font-bold text-slate-700">Nome:</label>
+                        <input type="text" id="name" name="name" required class="w-full p-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-accent focus:outline-none transition">
+                        <span class="error-message text-red-500 text-sm h-5 block mt-1"></span>
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="email" class="block mb-1 font-bold text-slate-700">Email:</label>
+                        <input type="email" id="email" name="email" required class="w-full p-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-accent focus:outline-none transition">
+                        <span class="error-message text-red-500 text-sm h-5 block mt-1"></span>
+                    </div>
+                    <div class="form-group mb-5">
+                        <label for="message" class="block mb-1 font-bold text-slate-700">Mensagem:</label>
+                        <textarea id="message" name="message" rows="3" required class="w-full p-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-accent focus:outline-none transition"></textarea>
+                        <span class="error-message text-red-500 text-sm h-5 block mt-1"></span>
+                    </div>
+                    <button type="submit" id="submit-button" class="btn-primary w-full">Enviar Mensagem</button>
+                    <div id="form-status" class="form-status mt-4 text-center font-bold"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white/80 backdrop-blur-lg border-t border-gray-200/80 flex-shrink-0">
+        <div class="container mx-auto px-6 py-4 text-center">
+            <div class="flex justify-center space-x-6 mb-2">
+                 <a href="https://www.linkedin.com/in/cluucas/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+            <div class="flex flex-col md:flex-row justify-center items-center md:space-x-4 mt-2 text-sm">
+                <span>caiosilva.developer@gmail.com</span>
+                <span class="hidden md:inline">|</span>
+                <span>(11) 94114-0607</span>
+            </div>
+            <p class="text-sm mt-3">&copy; 2025 Caio Lucas Silva.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>
