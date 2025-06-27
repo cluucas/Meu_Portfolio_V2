@@ -1,11 +1,11 @@
 @import 'https://cdn.tailwindcss.com';
 
 :root {
-    --bg-color: #FDFBF5;
+    --bg-color: #fdfbf5e8;
     --text-color: #5D5550;
     --heading-color: #4E4844;
     --primary-color: #81A382;
-    --secondary-color: #E8E5E0;
+    --secondary-color: #e8e5e0e1;
     --accent-color: #678868;
     --heading-font: 'Poppins', sans-serif;
     --body-font: 'Lora', serif;
@@ -111,4 +111,12 @@ footer a:hover {
 
 @media (min-width: 1024px) {
     h1 { font-size: 4.5rem; }
+}
+
+#menu-btn {
+    z-index: 50; 
+}
+
+#mobile-menu.open {
+    display: block;
 }

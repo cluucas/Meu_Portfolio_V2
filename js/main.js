@@ -4,6 +4,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const caixaLuz = document.getElementById('lightbox-overlay');
     const imagemCaixaLuz = document.getElementById('lightbox-image');
     const fecharCaixaLuz = document.getElementById('lightbox-close');
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+
+    if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+        });
+    }
+
+    
 
     if (caixaLuz && imagemCaixaLuz && fecharCaixaLuz) {
         document.querySelectorAll('.gallery-card img').forEach(imagem => {
