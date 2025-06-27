@@ -21,22 +21,21 @@ body {
     font-family: var(--body-font);
     display: flex;
     flex-direction: column;
-    line-height: 1.6; /* Melhorando a legibilidade */
+    line-height: 1.6;
 }
+
+body.no-scroll {
+    overflow: hidden;
+}
+
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
     color: var(--heading-color);
 }
 
-/* Tipografia Responsiva */
-h1 {
-    font-size: 2.5rem; /* Tamanho base para mobile */
-}
-
-h2 {
-    font-size: 2rem; /* Tamanho base para mobile */
-}
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
 
 .text-accent { color: var(--primary-color); }
 
@@ -48,7 +47,7 @@ h2 {
      font-weight: 600;
      font-family: var(--heading-font);
      transition: background-color 0.3s ease;
-     display: inline-block; /* Para garantir que o padding funcione corretamente */
+     display: inline-block;
 }
 
 .btn-primary:hover {
@@ -60,7 +59,7 @@ h2 {
     flex-grow: 1;
     align-items: center;
     justify-content: center;
-    padding: 2rem 1rem; /* Padding ajustado para mobile */
+    padding: 2rem 1rem;
     animation: fadeIn 0.5s ease-in-out;
 }
 
@@ -69,8 +68,9 @@ h2 {
     to { opacity: 1; transform: translateY(0); }
 }
 
-#mobile-menu.active {
-    transform: translateX(0%);
+.nav-link {
+    display: inline-block;
+    padding: 0.5rem 0;
 }
 
 .nav-link.active {
@@ -89,7 +89,7 @@ footer a:hover {
 
 .profile-image, .gallery-card img {
     width: 100%;
-    height: auto; /* Permite que a altura se ajuste proporcionalmente */
+    height: auto;
     object-fit: cover;
 }
 
@@ -97,31 +97,18 @@ footer a:hover {
     background-color: var(--secondary-color);
 }
 
-/* --- Media Queries para Responsividade --- */
-
-/* Tablets e telas maiores (a partir de 768px) */
 @media (min-width: 768px) {
     .page {
         padding: 2rem;
     }
-
-    h1 {
-        font-size: 3.75rem; /* Ajuste para telas maiores (equivalente a text-6xl do Tailwind) */
-    }
-
-    h2 {
-        font-size: 2.25rem; /* Ajuste para telas maiores (equivalente a text-4xl do Tailwind) */
-    }
-
+    h1 { font-size: 3.75rem; }
+    h2 { font-size: 2.25rem; }
     .container {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
 }
 
-/* Desktops e telas grandes (a partir de 1024px) */
 @media (min-width: 1024px) {
-    h1 {
-        font-size: 4.5rem; /* Ajuste para telas ainda maiores (equivalente a text-7xl do Tailwind) */
-    }
+    h1 { font-size: 4.5rem; }
 }

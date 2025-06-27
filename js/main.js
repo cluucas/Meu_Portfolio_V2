@@ -1,14 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    const botaoNavegacaoMovel = document.getElementById('mobile-nav-toggle');
-    const menuMovel = document.getElementById('mobile-menu');
-
-    if (botaoNavegacaoMovel && menuMovel) {
-        botaoNavegacaoMovel.addEventListener('click', () => {
-            menuMovel.classList.toggle('active');
-        });
-    }
-
+    const body = document.body;
     const caixaLuz = document.getElementById('lightbox-overlay');
     const imagemCaixaLuz = document.getElementById('lightbox-image');
     const fecharCaixaLuz = document.getElementById('lightbox-close');
@@ -21,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     imagemCaixaLuz.setAttribute('src', caminhoCompleto);
                     caixaLuz.classList.remove('hidden');
                     caixaLuz.classList.add('flex');
+                    body.classList.add('no-scroll');
                 }
             });
         });
@@ -28,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const fecharCaixaLuzFuncao = () => {
             caixaLuz.classList.add('hidden');
             caixaLuz.classList.remove('flex');
+            body.classList.remove('no-scroll');
         };
     
         fecharCaixaLuz.addEventListener('click', fecharCaixaLuzFuncao);
@@ -36,14 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Validação e envio do formulário de contato
     const formularioDeContato = document.getElementById('contact-form');
     
     if (formularioDeContato) {
         const botaoEnviar = document.getElementById('submit-button');
         const statusFormulario = document.getElementById('form-status');
 
-        // TODO: Substitua com as suas credenciais do EmailJS
         const publicKey = 'zzDUmDcmpaADEDfkb';
         const serviceID = 'service_q19pmbe';
         const templateID = 'template_yluictx';
