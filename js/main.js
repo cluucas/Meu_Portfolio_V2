@@ -54,6 +54,14 @@ document.addEventListener('DOMContentLoaded', () => {
             nav_projects: "Projetos",
             nav_certificates: "Certificados",
             nav_contact: "Contato",
+
+            // menu hamburguer
+            nav_home_mobile: "Início",
+            nav_about_mobile: "Sobre",
+            nav_projects_mobile: "Projetos",
+            nav_certificates_mobile: "Certificados",
+            nav_contact_mobile: "Contato",
+
             // index.html
             home_title: "Olá, me chamo Caio Lucas",
             home_subtitle: "Estudante de Engenharia de Software e futuro Engenheiro de IA, apaixonado por inovação, pesquisa e trabalho em equipe.",
