@@ -87,8 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    const languageSwitcher = document.getElementById('language-switcher');
-    const langButtons = languageSwitcher.querySelectorAll('button');
+    const langButtons = document.querySelectorAll('[data-lang-switch]');
 
     const setLanguage = (lang) => {
         document.querySelectorAll('[data-lang]').forEach(element => {

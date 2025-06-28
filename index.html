@@ -16,44 +16,66 @@
 </head>
 <body class="antialiased">
 
-    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-40 shadow-sm flex-shrink-0">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-slate-800">Caio Lucas Silva</a>
-    
-            <div id="language-switcher" class="flex items-center space-x-2 absolute left-1/2 -translate-x-1/2">
-                <button data-lang-switch="pt">
-                    <svg class="w-8 h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 6"><path fill="#009639" d="M0 0h9v6H0z"/><path fill="#FEDF00" d="M4.5 1 1 3l3.5 2 3.5-2z"/><path fill="#002776" d="M4.5 3a1 1 0 100-2 1 1 0 000 2z"/></svg>
-                </button>
-                <button data-lang-switch="en">
-                    <svg class="w-8 h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6"><path fill="#B22234" d="M0 0h12v6H0z"/><path fill="#fff" d="M0 1h12v1H0zm0 2h12v1H0z"/><path d="M0 0v3h5V0z" fill="#3C3B6E"/><g fill="#fff"><path d="m1.1 1.3-.3-.9-.9.3.6.7-.9.3.9.3-.3.9.7-.6.6.7v-1l.6-.7-.9-.3zM3.9 1.3l-.3-.9-.9.3.6.7-.9.3.9.3-.3.9.7-.6.6.7v-1l.6-.7-.9-.3z"/></g></svg>
-                </button>
-            </div>
-    
-            <button id="menu-btn" class="md:hidden block">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                </svg>
-            </button>
-    
-            <nav id="desktop-nav" class="hidden md:flex space-x-4 md:space-x-8">
+    Com certeza! O problema de sobreposição (overlapping) que você mostrou na imagem acontece porque os ícones de idioma foram posicionados de forma absoluta, sem considerar o espaço ocupado pelo título em telas menores.
+
+Para corrigir isso, vamos reestruturar o cabeçalho para que todos os elementos se ajustem de forma flexível e responsiva. A melhor abordagem é mover os ícones de idioma para dentro do menu de navegação em telas pequenas.
+
+Aqui estão as alterações necessárias:
+
+1. Novo Código HTML para o <header>
+Substitua todo o conteúdo da tag <header> em todos os seus arquivos HTML (index.html, sobre.html, projetos.html, certificados.html, contato.html) pelo código abaixo. Ele já está ajustado para a nova estrutura.
+
+HTML
+
+<header class="bg-white/80 backdrop-blur-lg sticky top-0 z-40 shadow-sm flex-shrink-0">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="index.html" class="text-2xl font-bold text-slate-800 flex-shrink-0">Caio Lucas Silva</a>
+
+        <div class="hidden md:flex items-center space-x-8">
+            <nav id="desktop-nav" class="flex space-x-8">
                 <a href="index.html" class="nav-link" data-lang="nav_home">Início</a>
                 <a href="sobre.html" class="nav-link" data-lang="nav_about">Sobre</a>
                 <a href="projetos.html" class="nav-link" data-lang="nav_projects">Projetos</a>
                 <a href="certificados.html" class="nav-link" data-lang="nav_certificates">Certificados</a>
                 <a href="contato.html" class="nav-link" data-lang="nav_contact">Contato</a>
             </nav>
+
+            <div id="language-switcher-desktop" class="flex items-center space-x-2">
+                <button data-lang-switch="pt">
+                    <img src="images/bandeira-brasil.png" alt="Brasil" class="w-8 h-auto">
+                </button>
+                <button data-lang-switch="en">
+                    <img src="images/bandeira-eua.png" alt="EUA" class="w-8 h-auto">
+                </button>
+            </div>
         </div>
-    
-        <div id="mobile-menu" class="hidden md:hidden">
-            <nav class="flex flex-col items-center space-y-4 py-4">
-                <a href="index.html" class="nav-link" data-lang="nav_home_mobile">Início</a>
-                <a href="sobre.html" class="nav-link" data-lang="nav_about_mobile">Sobre</a>
-                <a href="projetos.html" class="nav-link" data-lang="nav_projects_mobile">Projetos</a>
-                <a href="certificados.html" class="nav-link" data-lang="nav_certificates_mobile">Certificados</a>
-                <a href="contato.html" class="nav-link" data-lang="nav_contact_mobile">Contato</a>
-            </nav>
+
+        <button id="menu-btn" class="md:hidden block">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+        </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden">
+        <nav class="flex flex-col items-center space-y-4 py-4 border-b border-gray-200">
+            <a href="index.html" class="nav-link" data-lang="nav_home_mobile">Início</a>
+            <a href="sobre.html" class="nav-link" data-lang="nav_about_mobile">Sobre</a>
+            <a href="projetos.html" class="nav-link" data-lang="nav_projects_mobile">Projetos</a>
+            <a href="certificados.html" class="nav-link" data-lang="nav_certificates_mobile">Certificados</a>
+            <a href="contato.html" class="nav-link" data-lang="nav_contact_mobile">Contato</a>
+        </nav>
+        
+        <div id="language-switcher-mobile" class="flex justify-center items-center space-x-4 py-4">
+            <button data-lang-switch="pt">
+                <img src="images/bandeira-brasil.png" alt="Brasil" class="w-8 h-auto">
+            </button>
+            <button data-lang-switch="en">
+                <img src="images/bandeira-eua.png" alt="EUA" class="w-8 h-auto">
+            </button>
         </div>
-    </header>
+    </div>
+</header>
 
     <main class="flex-grow flex flex-col">
         <section class="page active text-center">
