@@ -14,6 +14,14 @@ document.addEventListener('DOMContentLoaded', () => {
             nav_projects: "Projects",
             nav_certificates: "Certificates",
             nav_contact: "Contact",
+
+            // menu hamburguer
+            nav_home_mobile: "Home",
+            nav_about_mobile: "About",
+            nav_projects_mobile: "Projects",
+            nav_certificates_mobile: "Certificates",
+            nav_contact_mobile: "Contact",
+
             // index.html
             home_title: "Hello, I'm Caio Lucas",
             home_subtitle: "Software Engineering student and future AI Engineer, passionate about innovation, research, and teamwork.",
