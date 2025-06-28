@@ -4,57 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre | Caio Lucas Silva</title>
+
+    <link rel="icon" type="image/png" href="android-chrome-512x512.png">
+
     <meta name="description" content="Estudante de Engenharia de Software e futuro Engenheiro de IA.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body class="antialiased">
 
     <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-40 shadow-sm flex-shrink-0">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="index.html" class="text-2xl font-bold text-slate-800">Caio Lucas Silva</a>
-
-        <button id="menu-btn" class="md:hidden block">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-            </svg>
-        </button>
-
-        <nav class="hidden md:flex space-x-4 md:space-x-8">
-            <a href="index.html" class="nav-link">Início</a>
-            <a href="sobre.html" class="nav-link">Sobre</a>
-            <a href="projetos.html" class="nav-link">Projetos</a>
-            <a href="certificados.html" class="nav-link">Certificados</a>
-            <a href="contato.html" class="nav-link">Contato</a>
-        </nav>
-    </div>
-
-    <div id="mobile-menu" class="hidden md:hidden">
-        <nav class="flex flex-col items-center space-y-4 py-4">
-            <a href="index.html" class="nav-link">Início</a>
-            <a href="sobre.html" class="nav-link">Sobre</a>
-            <a href="projetos.html" class="nav-link">Projetos</a>
-            <a href="certificados.html" class="nav-link">Certificados</a>
-            <a href="contato.html" class="nav-link">Contato</a>
-        </nav>
-    </div>
-</header>
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-slate-800">Caio Lucas Silva</a>
+    
+            <div id="language-switcher" class="flex items-center space-x-2 absolute left-1/2 -translate-x-1/2">
+                <button data-lang-switch="pt">
+                    <svg class="w-8 h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 6"><path fill="#009639" d="M0 0h9v6H0z"/><path fill="#FEDF00" d="M4.5 1 1 3l3.5 2 3.5-2z"/><path fill="#002776" d="M4.5 3a1 1 0 100-2 1 1 0 000 2z"/></svg>
+                </button>
+                <button data-lang-switch="en">
+                   <svg class="w-8 h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6"><path fill="#B22234" d="M0 0h12v6H0z"/><path fill="#fff" d="M0 1h12v1H0zm0 2h12v1H0z"/><path d="M0 0v3h5V0z" fill="#3C3B6E"/><g fill="#fff"><path d="m1.1 1.3-.3-.9-.9.3.6.7-.9.3.9.3-.3.9.7-.6.6.7v-1l.6-.7-.9-.3zM3.9 1.3l-.3-.9-.9.3.6.7-.9.3.9.3-.3.9.7-.6.6.7v-1l.6-.7-.9-.3z"/></g></svg>
+                </button>
+            </div>
+    
+            <button id="menu-btn" class="md:hidden block">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+    
+            <nav id="desktop-nav" class="hidden md:flex space-x-4 md:space-x-8">
+                <a href="index.html" class="nav-link" data-lang="nav_home">Início</a>
+                <a href="sobre.html" class="nav-link" data-lang="nav_about">Sobre</a>
+                <a href="projetos.html" class="nav-link" data-lang="nav_projects">Projetos</a>
+                <a href="certificados.html" class="nav-link" data-lang="nav_certificates">Certificados</a>
+                <a href="contato.html" class="nav-link" data-lang="nav_contact">Contato</a>
+            </nav>
+        </div>
+    
+        <div id="mobile-menu" class="hidden md:hidden">
+            <nav class="flex flex-col items-center space-y-4 py-4">
+                <a href="index.html" class="nav-link" data-lang="nav_home_mobile">Início</a>
+                <a href="sobre.html" class="nav-link" data-lang="nav_about_mobile">Sobre</a>
+                <a href="projetos.html" class="nav-link" data-lang="nav_projects_mobile">Projetos</a>
+                <a href="certificados.html" class="nav-link" data-lang="nav_certificates_mobile">Certificados</a>
+                <a href="contato.html" class="nav-link" data-lang="nav_contact_mobile">Contato</a>
+            </nav>
+        </div>
+    </header>
 
     <main class="flex-grow flex flex-col">
         <section class="page active">
             <div class="container mx-auto">
-                 <h2 class="text-4xl font-bold text-center mb-8">Sobre Mim</h2>
+                 <h2 class="text-4xl font-bold text-center mb-8" data-lang="about_title">Sobre Mim</h2>
                  <div class="grid md:grid-cols-5 gap-4 md:gap-8 items-center max-w-5xl mx-auto">
                     <div class="md:col-span-2">
                         <img src="images/sua-foto.jpg" alt="Foto profissional" class="rounded-lg shadow-xl w-full max-w-xs mx-auto profile-image">
                     </div>
                     <div class="md:col-span-3">
-                        <p class="text-lg mb-6 text-center md:text-left">Sou estudante de Engenharia de Software, apaixonado por IA e Machine Learning.<br><br>Tenho como objetivo de carreira me tornar especialista completo na área e atuar como Engenheiro de IA.</p>
-                        <h3 class="text-2xl font-bold mb-4 text-center md:text-left">Minhas Competências</h3>
+                        <p class="text-lg mb-6 text-center md:text-left" data-lang="about_bio">Sou estudante de Engenharia de Software, apaixonado por IA e Machine Learning.<br><br>Tenho como objetivo de carreira me tornar especialista completo na área e atuar como Engenheiro de IA.</p>
+                        <h3 class="text-2xl font-bold mb-4 text-center md:text-left" data-lang="about_skills_title">Minhas Competências</h3>
                         <div class="flex flex-wrap gap-3 justify-center md:justify-start">
                             <span class="bg-secondary-color text-slate-600 px-4 py-2 rounded-full font-semibold">Python</span>
                             <span class="bg-secondary-color text-slate-600 px-4 py-2 rounded-full font-semibold">Machine Learning</span>

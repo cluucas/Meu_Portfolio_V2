@@ -120,3 +120,13 @@ footer a:hover {
 #mobile-menu.open {
     display: block;
 }
+
+#language-switcher button {
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+#language-switcher button.active,
+#language-switcher button:hover {
+    opacity: 1;
+}
