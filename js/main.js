@@ -76,9 +76,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const dynamicLinks = {
         en: {
-            "resume-link": "URL_DO_SEU_CURRICULO_EM_INGLES_AQUI",
-            "project_1_link": "URL_DO_SEU_PROJETO_EM_INGLES_AQUI",
-            "certificate_1_link": "URL_DA_SUA_CREDENCIAL_EM_INGLES_AQUI",
+            "resume-link": "https://docs.google.com/document/d/1rTbN4LTked4fYLyGIbzymIZviJ2rVjiO4hmURS3V9Dg/edit?usp=sharing",
+            "project_1_link": "https://luxuriant-fang-e29.notion.site/Manual-Techinal-Support-en-us-15ec530d701580a792b8fe28d029f218",
+            "certificate_1_link": "https://www.coursera.org/account/accomplishments/specialization/NBX78AK2D860",
         },
         pt: {
             "resume-link": "https://docs.google.com/document/d/1t575zWSOU7f7c_BPuiVhS4FmsZTKHp6CdD2hNnaGF-0/edit?usp=sharing",
