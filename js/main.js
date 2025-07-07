@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
             nav_projects: "Projects",
             nav_certificates: "Certificates",
             nav_contact: "Contact",
+            ref_eua: 'EUA flag',
+            ref_br: 'BR flag',
 
             // menu hamburguer
             nav_home_mobile: "Home",
@@ -54,6 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
             nav_projects: "Projetos",
             nav_certificates: "Certificados",
             nav_contact: "Contato",
+            ref_eua: 'Bandeira EUA',
+            ref_br: 'Bandeira BR',
 
             // menu hamburguer
             nav_home_mobile: "Início",
