@@ -26,11 +26,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // index.html
             home_title: "Hello, I'm Caio Lucas",
-            home_subtitle: "Software Engineering student and future AI Engineer, passionate about innovation, research, and teamwork.",
+            home_subtitle: "Software Engineering student and functional SAP analyst. Passionate about innovation, research, and teamwork.",
             home_resume_button: "My Resume",
             // sobre.html
             about_title: "About Me",
-            about_bio: "I'm a Software Engineering student, passionate about AI and Machine Learning.<br><br>My career goal is to become a complete specialist in the field and work as an AI Engineer.",
+            about_bio: "Software Engineering student, I work professionally as a Functional SAP Analyst.",
             about_skills_title: "My Skills",
             // projetos.html
             projects_title: "Projects",
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
             home_resume_button: "Meu currículo",
             // sobre.html
             about_title: "Sobre Mim",
-            about_bio: "Sou estudante de Engenharia de Software, apaixonado por IA e Machine Learning.<br><br>Tenho como objetivo de carreira me tornar especialista completo na área e atuar como Engenheiro de IA.",
+            about_bio: "Estudante de Engenharia de Software, atuo profissionalmente como Analista SAP Funcional.",
             about_skills_title: "Minhas Competências",
             // projetos.html
             projects_title: "Projetos",
