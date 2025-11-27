@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // index.html
             home_title: "Olá, me chamo Caio Lucas",
-            home_subtitle: "Estudante de Engenharia de Software e futuro Engenheiro de IA, apaixonado por inovação, pesquisa e trabalho em equipe.",
+            home_subtitle: "Estudante de Engenharia de Software e analista SAP funcional. Apaixonado por inovação, pesquisa e trabalho em equipe.",
             home_resume_button: "Meu currículo",
             // sobre.html
             about_title: "Sobre Mim",
